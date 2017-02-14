@@ -116,18 +116,18 @@ p {
 .answers-incorrect {
 	padding: 15px;
 	color: red;
+	flex: 1;
 	background-color: #E8AFAF;
 	border: 1px solid red;
-	height: 50%;
 }
 
 .answers-correct {
 	padding: 15px;
-	color: green;	
+	color: green;
+	flex: 1;	
 	background-color: #AFE8AF;
 	border: 1px solid green;
 	animation: answer-correct .5s infinite alternate;
-	height: 50%;
 }
 
 .answers-else {
