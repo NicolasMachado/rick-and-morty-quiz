@@ -186,6 +186,7 @@ function startGame() {
 	displayQuestion(0);	
 	state.currentQuestion = 0;
 	state.score = 0;
+	$(".scorespan").text("Score: " + state.score);
 	state.answered = false;
 	$(".quizbox").removeClass("hidden");
 	$(".intro").addClass("hidden");
