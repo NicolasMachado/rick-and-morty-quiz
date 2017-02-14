@@ -1,0 +1,115 @@
+*, :before, :after {
+  box-sizing: border-box;
+}
+
+header {
+	background-color: #ddd;
+	display: flex;
+}
+
+main {
+	display: flex;
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+h1 {
+	font-size: 40px;
+	padding: 10px;
+}
+
+h2 {
+	font-size: 20px;
+	padding: 10px;
+}
+
+p {
+	padding: 10px;	
+}
+
+#answer1, #answer2, #answer3, #answer4 {
+	background-color: #ddd;
+	width: 50%;
+	height: 50%;
+	display: flex;
+	align-items: center;
+  	justify-content: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
+	padding: 10px;
+}
+
+.questionbox {
+	background-color: #eee;	
+	width: 100%;	
+}
+
+.explanationbox {
+	width: 100%;
+	background-color: #eee;	
+	margin-top: 20px;
+	display: flex;
+}
+
+.quizbox {
+	margin-top: 50px;
+	width: 100%;
+	max-height:300px;
+	display: flex;
+	flex-flow: wrap;
+}
+
+.logo {
+	background-color: #ccc;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.question {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.answersbox {
+	background-color: #ddd;
+	height: 30%;	
+	width: 100%;	
+	display: flex;
+	flex-flow: wrap;
+}
+
+.questionnumber {
+	width: 50%;
+	background-color: #bbb;
+}
+
+.score {
+	width: 50%;
+	background-color: #aaa;
+	display: flex;	
+}
+
+.questionscorewrapper {
+	display: flex;	
+}
+
+.scorespan {
+    margin-left: auto;	
+}
+
+.explanation {
+ max-width: 90%;
+ flex-grow: 1;
+}
+
+.next {
+	display: flex;
+	width: 100px;
+	background-color: #bbb;
+	align-items: center;
+	justify-content: center;
+	padding-left: 10px;
+	padding-right: 10px;
+    cursor: pointer;
+}
