@@ -13,6 +13,8 @@ html {
 }
 
 header {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
   	font-family: 'Pangolin', cursive;
 }
@@ -21,14 +23,15 @@ header {
     height: 150px;
     width: auto;
     margin-left: auto;
-    margin-right: auto;	
-}
+    margin-right: auto;}
 
 .imglogo {
-    width: auto;
+	width: 500px;
 }
 
 main {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	max-width: 700px;
 	margin-left: auto;
@@ -59,6 +62,8 @@ main {
 }
 
 .start-game {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	max-width: 170px;
 	margin-left: auto;
@@ -66,8 +71,12 @@ main {
 	margin-top: 10px;
 	margin-bottom: 10px;
 	background-color: #00B0C7;
-	align-items: center;
-	justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	padding-left: 10px;
 	padding-right: 10px;
     cursor: pointer;
@@ -101,11 +110,19 @@ p {
 	padding: 15px;
 	background-color: #eee;
 	min-width: 50%;
-	flex: 1;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	text-align: center;
-	align-items: center;
-  	justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+  	-webkit-box-pack: center;
+  	    -ms-flex-pack: center;
+  	        justify-content: center;
     border: 1px solid #ccc;
 }
 
@@ -116,7 +133,9 @@ p {
 .answers-incorrect {
 	padding: 15px;
 	color: red;
-	flex: 1;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
 	background-color: #E8AFAF;
 	border: 1px solid red;
 }
@@ -124,14 +143,22 @@ p {
 .answers-correct {
 	padding: 15px;
 	color: green;
-	flex: 1;	
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;	
 	background-color: #AFE8AF;
 	border: 1px solid green;
-	animation: answer-correct .5s infinite alternate;
+	-webkit-animation: answer-correct .5s infinite alternate;
+	        animation: answer-correct .5s infinite alternate;
 }
 
 .answers-else {
 	color: #bbb;	
+}
+
+@-webkit-keyframes answer-hover {
+	from {background-color: #eee;}
+    to {background-color: #ddd;}
 }
 
 @keyframes answer-hover {
@@ -139,9 +166,19 @@ p {
     to {background-color: #ddd;}
 }
 
+@-webkit-keyframes answer-correct {
+	from {background-color: #AFE8AF;}
+    to {background-color: #DEEEE1;}
+}
+
 @keyframes answer-correct {
 	from {background-color: #AFE8AF;}
     to {background-color: #DEEEE1;}
+}
+
+@-webkit-keyframes next-hover {
+	from {background-color: #00B0C7;}
+    to {background-color: #219BAB;}
 }
 
 @keyframes next-hover {
@@ -150,14 +187,18 @@ p {
 }
 
 .clickable:hover {
-    animation-name: answer-hover;
-    animation-duration: 0.5s;
+    -webkit-animation-name: answer-hover;
+            animation-name: answer-hover;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
     background-color: #ddd;
 }
 
 .next:hover, .start-game:hover {
-    animation-name: next-hover;
-    animation-duration: 0.5s;
+    -webkit-animation-name: next-hover;
+            animation-name: next-hover;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
 	background-color: #219BAB;
 }
 
@@ -170,6 +211,8 @@ p {
 	width: 100%;
 	margin-top: 20px;
 	margin-bottom: 20px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -194,8 +237,11 @@ p {
 .answersbox {
 	background-color: #ddd;
 	width: 100%;	
+	display: -webkit-box;	
+	display: -ms-flexbox;	
 	display: flex;
-	flex-flow: wrap;
+	-ms-flex-flow: wrap;
+	    flex-flow: wrap;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
     border-bottom: 1px solid #666;
     border-left: 1px solid #666;
@@ -210,10 +256,14 @@ p {
 .score {
 	width: 50%;
 	background-color: #00B0C7;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;	
 }
 
 .questionscorewrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;	
     border-left: 1px solid #666;
     border-top: 1px solid #666;
@@ -221,24 +271,32 @@ p {
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
 }
 
-.scorespan {
+.scorespan { 
     margin-left: auto;	
 }
 
 .explanation {
 	max-width: 83%;
-	flex-grow: 1;
+	-webkit-box-flex: 1;
+	    -ms-flex-positive: 1;
+	        flex-grow: 1;
 	text-align: justify;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
 }
 
 .next {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 	min-width: 100px;
 	margin-left: auto;
 	background-color: #00B0C7;
-	align-items: center;
-	justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	padding-left: 30px;
 	padding-right: 30px;
     cursor: pointer;
@@ -262,7 +320,10 @@ p {
 
 @media only screen and (max-width: 500px) {
     .explanationbox {
-    	flex-direction: column;
+    	-webkit-box-orient: vertical;
+    	-webkit-box-direction: normal;
+    	    -ms-flex-direction: column;
+    	        flex-direction: column;
     }
 	.next {
 		margin-left: auto;
@@ -277,6 +338,7 @@ p {
 
 	.imglogo {
 		content:url("images/logo-low-res.png");
+		width: 300px;
 	}
 
 	.logo {
@@ -290,4 +352,5 @@ p {
 	h2 {
 		font-size: 15px;
 	}
+}
 }
